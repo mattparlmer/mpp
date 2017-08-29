@@ -1,6 +1,9 @@
 #!/bin/bash
 
 ## shout - shell output formatter
+##
+## Copyright (c) 2017, Matt Parlmer and Ohlogen, MIT licensed.
+## See repository at https://github.com/mattparlmer/mpp for more docs.
 
 ## This script adapts user interface elements from the MIT licensed NodeJS
 ## project, specifically from https://deb.nodesource.com/setup_6.x.
@@ -50,6 +53,7 @@ print_msg() {
     echo "${cyan}---------------------------------------------------------------------------${normal}"
 }
 
+# Prints error
 print_err() {
     err_title="$1"
     err_body="$2"
@@ -66,7 +70,7 @@ print_err() {
     echo "${red}---------------------------------------------------------------------------${normal}"
 }
 
-
+# Prints standout green
 print_funky() {
     echo "${green}${standout}$1${normal}"
 }
