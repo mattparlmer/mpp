@@ -29,18 +29,18 @@ if test -t 1; then
 fi
 
 # Prints standard output
-print_ln() {
+println() {
     echo "${white}$1${normal}"
 }
 
 # Prints standard output with timestamp
-print_ts() {
+printts() {
     ts=$(date)
     echo "${white}${bold}${ts}: ${normal}${white}$1${normal}"
 }
 
 # Prints longform message
-print_msg() {
+printmsg() {
     msg_title="$1"
     msg_body="$2"
 
@@ -54,7 +54,7 @@ print_msg() {
 }
 
 # Prints error
-print_err() {
+printerrbloc() {
     err_title="$1"
     err_body="$2"
     err_ts=$(date)
@@ -71,6 +71,13 @@ print_err() {
 }
 
 # Prints standout green
-print_funky() {
+printfunky() {
     echo "${green}${standout}$1${normal}"
+}
+
+collect() {
+    echo
+    echo "${green}${bold}$1${normal}"
+    read -p "${green}${standout}" $2
+    echo "${normal}"
 }
